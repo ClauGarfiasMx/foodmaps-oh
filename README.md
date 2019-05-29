@@ -2,22 +2,27 @@
 
 FoodMaps project for Laboratoria Guadalajara 002 Open House Day 2019
 
-##Historia de usuario 1
+## Historia de usuario 1
+
 Yo como usuarix busco opciones de restaurantes cerca de mi ubicación.
 
-##DOD 1
+## DOD 1
+
 En la pantalla aparece un mapa con mi ubicación y debajo una lista de los restaurantes cercanos.
 
-##Historia de usuario 2
+## Historia de usuario 2
+
 Como usuarix quiero filtrar las opciones por:
 -costos
 -horarios
 -tipo de comida
 
-##DOD 2
+## DOD 2
+
 Hay en pantalla un selector con las opciones y al pulsar una, la lista de restaurantes muestra los resultados de mi elección.
 
-##Historia de usuario 3
+## Historia de usuario 3
+
 Yo usuarix quiero ver los detalles del restaurante que elegí.
 
 ##DOD 3
