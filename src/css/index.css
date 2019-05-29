@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans+Condensed:300,300i,700|Roboto:300,400,500&display=swap");
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -138,16 +140,59 @@ table {
   font-family: "Open Sans", sans-serif;
 }
 
-.flex-row {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
+hr {
+  height: 1px;
+  background-color: #fff;
+  width: 90%;
+  margin-top: 1rem;
 }
 
+.flex-column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  padding-top: 25%;
+  padding-bottom: 2rem;
+}
 .logo-container img {
-  max-height: 2.5rem;
+  max-height: 4.25rem;
 }
 
 .logo-container h1 {
-  font-size: 1.75rem;
+  font-size: 2.75rem;
+  font-family: "Abril Fatface", cursive;
+  color: #ff3600;
+  padding-top: 1rem;
+}
+
+.logo-container p {
+  padding: 1rem;
+  color: #ffff;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.15rem;
+}
+.orange-p {
+  padding: 1rem;
+  color: #ff3600;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.main-screen {
+  height: 100vh;
+  background-color: #2e2e2e;
+  background-image: url("https://claudiagarfias.works/laboratoria/sharedimages/foodmaps-wood-table-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#map {
+  height: 15rem;
+  margin: auto 2rem auto 2rem;
 }

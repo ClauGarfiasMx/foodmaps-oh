@@ -4,22 +4,28 @@
     <title>FoodMaps OpenHouse</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&display=swap"
       rel="stylesheet"
-    />
+    /> -->
     <link
       rel="icon"
       type="image/png"
-      href="https://claudiagarfias.works/laboratoria/sharedimages/foodmapsicon.png"
+      href="https://claudiagarfias.works/laboratoria/sharedimages/foodmapsicon-bl-wh.png"
     />
     <link rel="stylesheet" href="css/index.css" type="text/css" />
   </head>
   <body id="body">
     <div id="root"></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYtpM158MfmKnQVPNLdn2O32x_dAWgqnc&libraries=places&callback=initMap"
+      async
+      defer
+    ></script>
     <script src="./views/createElement.js"></script>
     <script src="./views/splashScreen.js"></script>
     <script src="./views/mainScreen.js"></script>
+    <script src="./map/map.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
