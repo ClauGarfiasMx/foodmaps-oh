@@ -1,0 +1,19 @@
+{
+  "name": "foodmaps-oh",
+  "version": "1.0.0",
+  "description": "FoodMaps project for Laboratoria Guadalajara 002 Open house Day 2019",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClauGarfiasMx/foodmaps-oh.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClauGarfiasMx/foodmaps-oh/issues"
+  },
+  "homepage": "https://github.com/ClauGarfiasMx/foodmaps-oh#readme"
+}
