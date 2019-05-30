@@ -106,7 +106,7 @@ function nearbyCallback(results, status) {
                         <p>${e.vicinity}</p>
                     </div>
                 </div>`;
-
+            cardContainer.innerHTML = '';
             cardContainer.innerHTML = cardDiv2;
         });
 
