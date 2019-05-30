@@ -123,7 +123,7 @@ function nearbyCallback(results, status) {
                 "";
             const rattingF = results[i].rating;
 
-            nearbyOutput(name, vicinity, priceLevel, rattingF, foto);
+            // nearbyOutput(name, vicinity, priceLevel, rattingF, foto);
 
             // inserPhoto(foto);
 
@@ -166,15 +166,15 @@ function nearbyCallback(results, status) {
 //     document.getElementById("card").appendChild(cardImg);
 // };
 
-function nearbyOutput(namePlace, vicinityPlace, priceL, rattingF, foto) {
-    // let cardImg = document.getElementById("card-photo")
-    // cardImg.src = `${foto}`;
-    // document.getElementById("card").appendChild(cardImg)
+// function nearbyOutput(namePlace, vicinityPlace, priceL, rattingF, foto) {
+//     // let cardImg = document.getElementById("card-photo")
+//     // cardImg.src = `${foto}`;
+//     // document.getElementById("card").appendChild(cardImg)
 
-    document
-        .getElementById("nearbyResults")
-        .append(
-            `<div>NOMBRE:  ${namePlace} | DIRECCION  ${vicinityPlace}  price  ${priceL} ratting ${rattingF}</div> `
-        );
-    document.createElement("img");
+//     document
+//         .getElementById("nearbyResults")
+//         .append(
+//             `<div>NOMBRE:  ${namePlace} | DIRECCION  ${vicinityPlace}  price  ${priceL} ratting ${rattingF}</div> `
+//         );
+//     document.createElement("img");
 }
