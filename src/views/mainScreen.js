@@ -2,30 +2,32 @@ const mainScreen = `
   <section class="main-screen">
     <div class="logo-container flex-column">
       <img src="https://claudiagarfias.works/laboratoria/sharedimages/foodmapslogo.png" />
-      <h1>find & feed</h1>
+      <h1>find & eat</h1>
       <p>¿qué se te antoja hoy?</p>
     </div>
+
+    <p class="orange-p" for="myLocation-lat">Restaurantes más cercanos:</p>
     <div class="map-container">
       <section id="map" />
     </div>
     <hr>
-    <p class="orange-p">Encuentra un lugar:</p>
-    <div class="select-div">
-      <select class="select-restaurant">
-        <option>Costos</option>
-        <option>Horarios</option>
-        <option>Tipo de comida</option>
-      </select>
+
+
+    <div
+    class="settings">
+
+    <p class="orange-p" for="myLocation-lat">O encuentra tu restaurante:</p>
+    <input type="text" id="myLocation-lat" class="form-control" placeholder="ALGUN TEXTO" />
+
+    <button type="submit" id="boton">BUSCAR</button>
+
+
+    <hr>
+    <h3>Resultado de Busqueda</h3>
+
+    <div id="nearbyResults">
+      <ul></ul>
     </div>
-    <div class="card-container">
-      <div class="card">
-        <div>
-          <img class="card-img" />
-          <h3 class="card-title">Restaurante</h3>
-        </div>
-        <div class="card-descrption">
-          <p>Descripción del restaurante</p>
-        </div>
-      </div>
-    </div>
+  </div>
+
   </section>`;

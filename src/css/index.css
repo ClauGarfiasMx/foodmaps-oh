@@ -139,12 +139,18 @@ table {
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
-
+body {
+  color: #ffff;
+  text-align: center !important;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.25rem;
+}
 hr {
-  height: 1px;
+  height: 0.05rem;
   background-color: #fff;
   width: 90%;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .flex-column {
@@ -155,8 +161,8 @@ hr {
 }
 
 .logo-container {
-  padding-top: 25%;
-  padding-bottom: 2rem;
+  padding-top: 30%;
+  padding-bottom: 4rem;
 }
 .logo-container img {
   max-height: 4.25rem;
@@ -170,29 +176,62 @@ hr {
 }
 
 .logo-container p {
-  padding: 1rem;
+  padding: 2rem 0 0 0;
   color: #ffff;
   font-family: "Open Sans Condensed", sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
 }
 .orange-p {
   padding: 1rem;
   color: #ff3600;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 300;
   text-transform: uppercase;
 }
 
 .main-screen {
-  height: 100vh;
+  height: 300vh;
   background-color: #2e2e2e;
-  background-image: url("https://claudiagarfias.works/laboratoria/sharedimages/foodmaps-wood-table-background.jpg");
+  background-image: url("https://claudiagarfias.works/laboratoria/sharedimages/foodmaps-wood-table-background-br.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  background-position: top center;
 }
 
 #map {
   height: 15rem;
   margin: auto 2rem auto 2rem;
+}
+
+input {
+  line-height: 1.35rem;
+  height: 3.5rem;
+  display: block;
+  margin: auto;
+  width: 80%;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  border: none;
+  background-color: #ffffff65;
+  border: 1px solid #fff;
+  font-size: 1.45rem;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+button {
+  margin: 1rem auto;
+  background-color: #ff36009c;
+  border: none;
+  padding: 0.75rem 4rem;
+  color: #fff;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.35rem;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: #ff3600;
 }
