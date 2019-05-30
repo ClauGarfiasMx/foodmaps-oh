@@ -105,12 +105,15 @@ function nearbyCallback(results, status) {
 
       var marker = new google.maps.Marker({
         map: map,
-        icon: results[i].icon, // Aquí puedes poner la URL del asset del icono
+        icon:
+          "https://claudiagarfias.works/laboratoria/sharedimages/foodmapsmapplaceholder.png", // Aquí puedes poner la URL del asset del icono
+
         place: {
           placeId: results[i].place_id,
           location: results[i].geometry.location
         }
       });
+      console.log(results[i].icon);
 
       google.maps.event.addListener(marker, "click", function() {
         infoWindow.setContent(name + "<br>" + vicinity);
@@ -118,7 +121,7 @@ function nearbyCallback(results, status) {
       });
     }
   }
-  console.log(results + " resultas");
+  console.log(results.outerHTML() + " resultas");
 }
 
 function nearbyOutput(namePlace, vicinity) {

@@ -1,86 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Place Searches</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <meta charset="utf-8" />
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-    <script>
-      // This example requires the Places library. Include the libraries=places
-      // parameter when you first load the API. For example:
-      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-      var map;
-      var service = new google.maps.infowindow();
-      var infowindow = new google.maps.places.PlacesService(_map);
-      function initMap() {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          var latlng = new google.maps.LatLng(
-            position.coords.latitude,
-            position.coords.longitude
-          );
 
-          _map = new google.maps.Map(document.getElementById("map"), {
-            center: latlng,
-            zoom: 15
-          });
+<section class="main-screen">
+  <div class="logo-container flex-column">
+    <img src="https://claudiagarfias.works/laboratoria/sharedimages/foodmapslogo.png" />
+    <h1>find & eat</h1>
+    <p>¿qué se te antoja hoy?</p>
+  </div>
+  <p class="orange-p" for="myLocation-lat">Explora restaurantes cercanos:</p>
+  <div class="map-container">
+    <section id="map" />
+  </div>
+  <hr>
+  <div
+  class="settings">
+    <p class="orange-p" for="myLocation-lat">O encuentra tu restaurante:</p>
+    <input type="text" id="myLocation-lat" class="form-control" placeholder="LOREM IPSUM" />
+    <button type="submit" id="boton">BUSCAR</button>
+    <hr>
+    <h3>Resultado de Busqueda</h3>
+    <div id="nearbyResults">
+    <ul></ul>
+  </div>
+</div>
+</section>  
 
-          // Especificamos la localización, el radio y el tipo de lugares que queremos obtener
-          var request = {
-            location: latlng /*provee la latitud y longitud de un lugar*/,
-            radius: "1000",
-            query: ["Restaurante"] /*se puede usar query en lugar de type */,
-            center: latlng
-          };
-          service.nearbysearch(request, callback);
-          /*nearbysearch() y textSearch() estas funciones retornan un arreglo de objetos de PlaceResults  */
-        });
-      }
-
-      function createMarker(place) {
-        var placeLoc = place.geometry.location;
-        var marker = new google.maps.Marker({
-          map: _map,
-          position: place.geometry.location
-        });
-        google.maps.event.addListener(marker, "click", function() {
-          infowindow.setContent(place.name, place.position);
-          infowindow.open(_map, this);
-        });
-      }
-      function callback(results, status) {
-        /*PlacesServiceStatus objeto responsivo que contiene el estatus de respuesta, track de porque el lugar es fallido*/
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-          for (var i = 0; i < results.length; i++) {
-            var place = results[i];
-            createMarker(results[i]);
-          }
-        }
-      }
-    </script>
-  </head>
-  <body>
-    <section id="map"></section>
-    <!-- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYMSo9ZhZXIiYOM8jZpao8coogPd06l6w&callback=initMap">
-    </script> -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYtpM158MfmKnQVPNLdn2O32x_dAWgqnc&libraries=places&callback=initMap"
-      async
-      defer
-    ></script>
-    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYMSo9ZhZXIiYOM8jZpao8coogPd06l6w&sensor=true"></script> -->
-  </body>
-</html>

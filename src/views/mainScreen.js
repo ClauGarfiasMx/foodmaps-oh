@@ -12,14 +12,14 @@ const mainScreen = `
   <hr>
   <div
   class="settings">
-  <p class="orange-p" for="myLocation-lat">O encuentra tu restaurante:</p>
-  <input type="text" id="myLocation-lat" class="form-control" placeholder="LOREM IPSUM" />
-  <button type="submit" id="boton">BUSCAR</button>
-  <hr>
-  <h3>Resultado de Busqueda</h3>
-  <div id="nearbyResults">
+    <p class="orange-p" for="myLocation-lat">O encuentra tu restaurante:</p>
+    <input type="text" id="myLocation-lat" class="form-control" placeholder="LOREM IPSUM" />
+    <button type="submit" id="boton">BUSCAR</button>
+    <hr>
+    <h3>Resultado de Busqueda</h3>
+    <div id="nearbyResults">
     <ul></ul>
   </div>
 </div>
-</section>  
+</section> 
 `;
