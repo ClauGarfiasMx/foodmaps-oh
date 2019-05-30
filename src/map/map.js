@@ -90,10 +90,9 @@ function nearbyCallback(results, status) {
         let cardContainer = document.getElementById("card");
 
         results.map((e, i) => {
-            const cardPhoto = results[i].photos[0].getUrl({
-                maxWidth: 200,
-                maxHeight: 200
-            });
+            const cardPhoto = results[i].photos ?
+                results[i].photos[0].getUrl({ maxWidth: 200, maxHeight: 200 }) :
+                "";
             console.log(e.name);
 
             let cardDiv2 = `
@@ -106,7 +105,7 @@ function nearbyCallback(results, status) {
                         <p>${e.vicinity}</p>
                     </div>
                 </div>`;
-
+            // cardContainer.innerHTML = "";
             cardContainer.innerHTML += cardDiv2;
         });
 
