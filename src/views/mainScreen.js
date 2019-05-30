@@ -5,7 +5,7 @@ const mainScreen = `
     <h1>find & eat</h1>
     <p>¿qué se te antoja hoy?</p>
   </div>
-  <p class="orange-p" for="myLocation-lat">Restaurantes más cercanos:</p>
+  <p class="orange-p" for="myLocation-lat">Explora restaurantes cercanos:</p>
   <div class="map-container">
     <section id="map" />
   </div>
@@ -13,7 +13,7 @@ const mainScreen = `
   <div
   class="settings">
   <p class="orange-p" for="myLocation-lat">O encuentra tu restaurante:</p>
-  <input type="text" id="myLocation-lat" class="form-control" placeholder="ALGUN TEXTO" />
+  <input type="text" id="myLocation-lat" class="form-control" placeholder="LOREM IPSUM" />
   <button type="submit" id="boton">BUSCAR</button>
   <hr>
   <h3>Resultado de Busqueda</h3>

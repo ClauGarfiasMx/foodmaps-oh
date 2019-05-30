@@ -1,11 +1,11 @@
 const splashScreen = `
-<section class="main-section">
+<section class="main-splash-section">
   <div class="splash-section">
-    <img
+    <a href="#main"><img
       class="main-logo"
-      src="https://claudiagarfias.works/laboratoria/sharedimages/foodmaps-logo.png"
-    />
-    <h1>FoodMaps</h1>
+      src="https://claudiagarfias.works/laboratoria/sharedimages/foodmapslogo.png"
+    /></a>
+    <h2>demo:<span> bit.ly/2MhQLwE</span></h2>
   </div>
 </section>
 `;
