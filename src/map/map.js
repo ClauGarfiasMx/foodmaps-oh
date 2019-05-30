@@ -89,13 +89,13 @@ function nearbyCallback(results, status) {
 
         let cardContainer = document.getElementById("card");
 
-        results.map((e, i) => {
+        let cardDiv2 = results.map((e, i) => {
             const cardPhoto = results[i].photos ?
                 results[i].photos[0].getUrl({ maxWidth: 200, maxHeight: 200 }) :
                 "";
             console.log(e.name);
 
-            let cardDiv2 = `
+            let cardArr = `
                 <div class="card-div" id=card${i}>
                 <div class="card-img-div">
                     <img  class="card-img" src=${cardPhoto}/>
@@ -106,8 +106,11 @@ function nearbyCallback(results, status) {
                     </div>
                 </div>`;
             // cardContainer.innerHTML = "";
-            cardContainer.innerHTML += cardDiv2;
         });
+
+        let injectArr = cardDiv2.join("");
+        console.log(cardDiv2);
+        cardContainer.innerHTML = injectArr;
 
         for (var i = 0; i < results.length; i++) {
             let infoPlace = results[i];
@@ -170,7 +173,7 @@ function nearbyOutput(namePlace, vicinityPlace, priceL, rattingF, foto) {
     document
         .getElementById("nearbyResults")
         .append(
-            `NOMBRE:  ${namePlace} | DIRECCION  ${vicinityPlace}  price  ${priceL} ratting ${rattingF} `
+            `<div>NOMBRE:  ${namePlace} | DIRECCION  ${vicinityPlace}  price  ${priceL} ratting ${rattingF}</div> `
         );
     document.createElement("img");
 }

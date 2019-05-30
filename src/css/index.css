@@ -285,9 +285,10 @@ button:hover {
     color: #000;
 }
 
-#nearbyResults {
+
+/* #nearbyResults {
     display: none;
-}
+} */
 
 .card-img-div img {
     max-height: 4rem;
