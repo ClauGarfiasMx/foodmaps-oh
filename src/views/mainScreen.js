@@ -18,11 +18,11 @@ const mainScreen = `
 				<option value=""selected>Seleccionar </option>
 				<option value="mexicana">Mexicana</option>
 				<option value="italiana">Italiana</option>
-				<option value="china">China</option>
+				
 				<option value="japonesa">Japonesa</option>
-				<option value="libanesa">Libanesa</option>
+
 				<option value="arabe">Arabe</option>
-				<option value="arabe">Fast food</option>
+				<option value="fast food">Fast food</option>
 			</select>
             </div>
             <button type="submit" id="boton">FILTRAR</button>

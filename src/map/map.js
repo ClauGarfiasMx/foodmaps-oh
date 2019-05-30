@@ -177,4 +177,4 @@ function nearbyCallback(results, status) {
 //             `<div>NOMBRE:  ${namePlace} | DIRECCION  ${vicinityPlace}  price  ${priceL} ratting ${rattingF}</div> `
 //         );
 //     document.createElement("img");
-}
+// }
