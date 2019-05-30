@@ -106,6 +106,7 @@ function nearbyCallback(results, status) {
                     </div>
                 </div>`;
             // cardContainer.innerHTML = "";
+            return cardArr;
         });
 
         let injectArr = cardDiv2.join("");
