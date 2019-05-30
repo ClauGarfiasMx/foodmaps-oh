@@ -106,8 +106,8 @@ function nearbyCallback(results, status) {
                         <p>${e.vicinity}</p>
                     </div>
                 </div>`;
-            cardContainer.innerHTML = '';
-            cardContainer.innerHTML = cardDiv2;
+
+            cardContainer.innerHTML += cardDiv2;
         });
 
         for (var i = 0; i < results.length; i++) {
@@ -120,7 +120,7 @@ function nearbyCallback(results, status) {
                 "";
             const rattingF = results[i].rating;
 
-            // nearbyOutput(name, vicinity, priceLevel, rattingF, foto);
+            nearbyOutput(name, vicinity, priceLevel, rattingF, foto);
 
             // inserPhoto(foto);
 
@@ -163,15 +163,15 @@ function nearbyCallback(results, status) {
 //     document.getElementById("card").appendChild(cardImg);
 // };
 
-// function nearbyOutput(namePlace, vicinityPlace, priceL, rattingF, foto) {
-//     // let cardImg = document.getElementById("card-photo")
-//     // cardImg.src = `${foto}`;
-//     // document.getElementById("card").appendChild(cardImg)
+function nearbyOutput(namePlace, vicinityPlace, priceL, rattingF, foto) {
+    // let cardImg = document.getElementById("card-photo")
+    // cardImg.src = `${foto}`;
+    // document.getElementById("card").appendChild(cardImg)
 
-//     document
-//         .getElementById("nearbyResults")
-//         .append(
-//             `NOMBRE:  ${namePlace} | DIRECCION  ${vicinityPlace}  price  ${priceL} ratting ${rattingF} `
-//         );
-//     document.createElement("img");
+    document
+        .getElementById("nearbyResults")
+        .append(
+            `NOMBRE:  ${namePlace} | DIRECCION  ${vicinityPlace}  price  ${priceL} ratting ${rattingF} `
+        );
+    document.createElement("img");
 }
