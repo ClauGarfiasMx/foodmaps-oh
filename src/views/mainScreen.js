@@ -8,11 +8,6 @@ const mainScreen = `
             <p>¿qué se te antoja hoy?</p>
         </div>
 
-        <div class="map-container">
-
-
-            <section id="map" />
-        </div>
         <hr>
         <div class="settings">
         <button type="submit" id="boton">VER RESTAURANTES CERCANOS</button>
@@ -35,6 +30,13 @@ const mainScreen = `
             
             <p id="empty" hidden>restaurante</p>
             <hr>
+
+            
+        <div class="map-container">
+
+
+        <section id="map" />
+    </div>
 
             <div id="card">
                 <img id="card-photo" src="" />
