@@ -29,14 +29,16 @@ const mainScreen = `
 
             
             <p id="empty" hidden>restaurante</p>
-            <hr>
+           
 
             
         <div class="map-container">
 
 
         <section id="map" />
+        
     </div>
+    <hr>
 
             <div id="card">
                 <img id="card-photo" src="" />

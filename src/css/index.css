@@ -153,6 +153,7 @@ body {
     text-align: center !important;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 1.25rem;
+    background-color: #000;
 }
 
 .splash-section {
@@ -250,7 +251,7 @@ input {
     line-height: 1.35rem;
     height: 3.5rem;
     display: block;
-    margin: auto;
+    margin: auto auto 1rem auto;
     width: 75%;
     border-radius: 5px;
     -webkit-appearance: none;
@@ -265,7 +266,7 @@ button {
     margin: 1rem auto;
     background-color: #ff48009c;
     border: none;
-    padding: 0.75rem 1rem;
+    padding: 1rem;
     color: #fff;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 1.35rem;
@@ -310,6 +311,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
+    color: #000;
 }
 
 .card-description h3 {
