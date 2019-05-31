@@ -5,7 +5,7 @@ document.getElementById("boton").addEventListener("click", requestData);
 
 function requestData() {
     // type=document.getElementById("myLocation-lat").value;
-    type = document.getElementById("type").value;
+    type = document.getElementById("empty").innerText;
     document.getElementById("nearbyResults").innerHTML = "";
     // if (type === "") {
     //     alert("Favor de seleccionar un campo");
@@ -14,6 +14,19 @@ function requestData() {
     // }
     initMap();
 }
+
+let dataList = document.getElementsByName("myTypes")[0];
+dataList.addEventListener("change", function() {
+    type = this.value;
+    document.getElementById("nearbyResults").innerHTML = "";
+    dataList.value = "";
+
+    if (type === "") {
+        alert("Favor de seleccionar un campo");
+    } else {
+        initMap();
+    }
+});
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {

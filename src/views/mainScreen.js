@@ -1,6 +1,7 @@
 const mainScreen = `
 <section class="main-container">
     <div class="main-screen">
+        
         <div class="logo-container flex-column">
             <img src="https://claudiagarfias.works/laboratoria/sharedimages/foodmapslogo.png" />
             <h1>find & eat</h1>
@@ -8,24 +9,31 @@ const mainScreen = `
         </div>
 
         <div class="map-container">
+
+
             <section id="map" />
         </div>
         <hr>
         <div class="settings">
-            <p class="orange-p">filtra por tipo de cocina:</p>
-            <div id="foodType">
-                <select id="type">
-				<option value=""selected>Seleccionar </option>
-				<option value="mexicana">Mexicana</option>
-				<option value="italiana">Italiana</option>
-				
-				<option value="japonesa">Japonesa</option>
+        <button type="submit" id="boton">VER RESTAURANTES CERCANOS</button>
+            <p class="orange-p">O ElegIR una categoría:</p>
 
-				<option value="arabe">Arabe</option>
-				<option value="fast food">Fast food</option>
-			</select>
-            </div>
-            <button type="submit" id="boton">FILTRAR</button>
+            <div class="select-container" data-content="">
+            <input type="text" list="kindFood"  name="myTypes" id="input"></label> 
+            <datalist id="kindFood" >
+                    <option value="Comida Mexicana" ></option>
+                    <option value="Comida Italiana"></option>
+                    <option value="Comida China"></option>
+                    <option value="Comida Japonesa"></option>
+                    <option value="Comida Libanesa"></option>
+                    <option value="Comida Arabe"></option>
+                    <option value="Comida Corrida"></option>
+            </datalist>
+        </div>
+
+
+            
+            <p id="empty" hidden>restaurante</p>
             <hr>
 
             <div id="card">

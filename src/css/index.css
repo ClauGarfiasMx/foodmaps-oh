@@ -255,7 +255,7 @@ input {
     height: 3.5rem;
     display: block;
     margin: auto;
-    width: 80%;
+    width: 75%;
     border-radius: 5px;
     -webkit-appearance: none;
     border: none;
@@ -275,6 +275,7 @@ button {
     font-size: 1.35rem;
     border-radius: 5px;
     font-weight: 700;
+    width: 75%;
 }
 
 button:hover {
@@ -291,15 +292,33 @@ button:hover {
 } */
 
 .card-img-div img {
-    max-height: 4rem;
+    object-fit: cover;
+    object-position: 100% 0;
+    width: 6rem;
+    height: 6rem;
+    margin-right: 1rem;
 }
 
 .card-div {
-    text-align: left;
     display: flex;
-    margin: 1rem;
-    padding: 0.35rem;
+    margin: 1.5rem 1rem;
+    padding: 1rem;
     background-color: rgba(255, 255, 255, 0.5);
+    align-items: center;
+    text-align: left !important;
+}
+
+.card-description {
+    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.card-description h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 select {
