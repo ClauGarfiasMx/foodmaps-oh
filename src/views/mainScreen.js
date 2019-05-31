@@ -24,6 +24,12 @@ const mainScreen = `
                     <option value="Comida Libanesa"></option>
                     <option value="Comida Arabe"></option>
                     <option value="Comida Corrida"></option>
+                    <option value="Pizza"></option>
+                    <option value="Sushi"></option>
+                    <option value="Tacos"></option>
+                    <option value="Comida Oriental"></option>
+                    <option value="Comida Asiática"></option>
+                    <option value="Comida india"></option>
             </datalist>
         </div>
         <hr>

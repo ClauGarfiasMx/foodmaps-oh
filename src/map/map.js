@@ -82,12 +82,12 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 function getNearby(lat, lng, map, type) {
     var userLocation = new google.maps.LatLng(lat, lng);
     // var type = type.value;
-    console.log(type.value + " tipo.value");
+    console.log(type);
 
     var request = {
         location: userLocation,
         radius: 5000,
-        query: ["restaurante"],
+        query: ["restaurant"],
         name: type
     };
 
@@ -116,6 +116,11 @@ function nearbyCallback(results, status) {
                     <div class="card-description">
                         <h3>${e.name}</h3>
                         <p>${e.vicinity}</p>
+                        <a class="card-link" target="_blank" href="https://www.google.com/maps/place/${
+                          e.name
+                        }/@${
+        e.geometry.location
+      },[12]z/">Ver en  Google Maps</a>
                     </div>
                 </div>`;
             // cardContainer.innerHTML = "";
