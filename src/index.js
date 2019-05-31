@@ -10,3 +10,10 @@ if (location.hash === "") {
 if (location.hash === "#main") {
     contentDiv.innerHTML = mainScreen;
 }
+
+window.onpopstate = event => {
+    console.log(
+        "location: " + document.location + ", state: " + JSON.stringify(event.state)
+    );
+    window.location.reload(true);
+};
