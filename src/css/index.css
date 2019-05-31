@@ -304,7 +304,7 @@ button:hover {
     align-items: center;
     text-align: left !important;
     border-radius: 5px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .card-description {

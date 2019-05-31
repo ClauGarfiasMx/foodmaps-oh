@@ -46,6 +46,10 @@ const mainScreen = `
         <section id="map" />
         
     </div>
+    <p style="margin-top:1rem">Desarrollado por:</p>
+    <p style="margin:1rem auto .5rem auto">Ana Laura Flores: anafrs26@gmail.com | Iris Aguiar: ing.aguiarg@gmail.com</p>
+    <p>Selene Hernández: selene.hdz.f@gmail.com | <a style="color:#ff5e1e" href="https://claudiagarfias.works">Claudia Garfias: me@claudiagarfias.works</a></p>
+
     
 
             <div id="card">
@@ -60,5 +64,6 @@ const mainScreen = `
             </div>
         </div>
     </div>
+
 </section>
 `;
