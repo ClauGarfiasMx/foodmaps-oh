@@ -12,6 +12,7 @@ const mainScreen = `
         <div class="settings">
         <button type="submit" id="boton">VER RESTAURANTES CERCANOS</button>
             <p class="orange-p">O ElegIR una categoría:</p>
+            
 
             <div class="select-container" data-content="">
             <input type="text" list="kindFood"  name="myTypes" id="input"></label> 
@@ -25,6 +26,7 @@ const mainScreen = `
                     <option value="Comida Corrida"></option>
             </datalist>
         </div>
+        <hr>
 
 
             
@@ -38,7 +40,7 @@ const mainScreen = `
         <section id="map" />
         
     </div>
-    <hr>
+    
 
             <div id="card">
                 <img id="card-photo" src="" />

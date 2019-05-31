@@ -59,7 +59,6 @@ function initMap() {
                 infoWindow.setContent("Tu estas aquí");
                 map.setCenter(latlng); // Centramos el Mapa a la ubicación actual
                 getNearby(pos["lat"], pos["lng"], map, pos["type"]);
-                details(pos["lat"], pos["lng"], map, pos["type"]);
             },
 
             function() {
@@ -83,12 +82,12 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 function getNearby(lat, lng, map, type) {
     var userLocation = new google.maps.LatLng(lat, lng);
     // var type = type.value;
-    // console.log(type.value + " tipo.value");
+    console.log(type.value + " tipo.value");
 
     var request = {
         location: userLocation,
         radius: 5000,
-        query: ["restaurant"],
+        query: ["restaurante"],
         name: type
     };
 
@@ -97,30 +96,9 @@ function getNearby(lat, lng, map, type) {
     service.nearbySearch(request, nearbyCallback);
 }
 
-const details = (lat, lng, map, type) => {
-    var userLocation = new google.maps.LatLng(lat, lng);
-    // var type = type.value;
-    // console.log(type.value + " tipo.value");
-
-    var request = {
-        location: userLocation,
-        radius: 5000,
-        query: ["restaurant"],
-        name: type
-    };
-
-    var service = new google.maps.places.PlacesService(map);
-
-    service.nearbySearch(request, (results, status) => {
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-            console.log(results);
-        }
-    });
-};
-
 function nearbyCallback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
-        // console.log(results);
+        console.log(results);
 
         let cardContainer = document.getElementById("card");
 
@@ -128,7 +106,7 @@ function nearbyCallback(results, status) {
             const cardPhoto = results[i].photos ?
                 results[i].photos[0].getUrl({ maxWidth: 200, maxHeight: 200 }) :
                 "";
-            // console.log(e.name);
+            console.log(e.name);
 
             let cardArr = `
                 <div class="card-div" id=card${i}>
