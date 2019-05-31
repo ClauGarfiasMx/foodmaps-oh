@@ -87,7 +87,7 @@ function getNearby(lat, lng, map, type) {
     var request = {
         location: userLocation,
         radius: 5000,
-        query: ["restaurant"],
+        query: ["restaurante"],
         name: type
     };
 
@@ -116,7 +116,6 @@ function nearbyCallback(results, status) {
                     <div class="card-description">
                         <h3>${e.name}</h3>
                         <p>${e.vicinity}</p>
-                        <p>${e.website}</p>
                     </div>
                 </div>`;
             // cardContainer.innerHTML = "";
