@@ -224,25 +224,21 @@ hr {
     padding: 1rem 1rem 0.5rem 1rem;
     color: #ff4800;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-weight: 300;
     text-transform: uppercase;
 }
 
 .main-container {
-    background-color: #2e2e2e;
-    background-image: url("https://claudiagarfias.works/laboratoria/sharedimages/0-movilfoodmaps-bckgrnd-bl.jpg");
-    background-size: contain;
-    background-position: center;
+    background-color: #000000;
 }
 
 .main-screen {
-    /* height: 300vh; */
     background-color: #2e2e2e;
-    background-image: url("https://claudiagarfias.works/laboratoria/sharedimages/0-movilfoodmaps-bckgrnd.jpg");
+    background-image: url("https://claudiagarfias.works/laboratoria/sharedimages/foodmaps-wood-table-background-br.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
 }
 
 #map {
@@ -302,10 +298,11 @@ button:hover {
 .card-div {
     display: flex;
     margin: 1.5rem 1rem;
-    padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.81);
     align-items: center;
     text-align: left !important;
+    border-radius: 5px;
 }
 
 .card-description {
