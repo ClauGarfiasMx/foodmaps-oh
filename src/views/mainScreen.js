@@ -28,7 +28,7 @@ const mainScreen = `
 
 
             
-            <p id="empty" hidden>restaurante</p>
+            <p id="empty" hidden>comida+restaurant+bar</p>
            
 
             

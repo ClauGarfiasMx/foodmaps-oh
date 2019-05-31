@@ -35,7 +35,7 @@ function initMap() {
             lat: -34.397,
             lng: 150.644
         },
-        zoom: 12,
+        zoom: 14,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
@@ -87,7 +87,7 @@ function getNearby(lat, lng, map, type) {
     var request = {
         location: userLocation,
         radius: 5000,
-        query: ["restaurante"],
+        query: ["restaurant"],
         name: type
     };
 
@@ -116,6 +116,7 @@ function nearbyCallback(results, status) {
                     <div class="card-description">
                         <h3>${e.name}</h3>
                         <p>${e.vicinity}</p>
+                        <p>${e.website}</p>
                     </div>
                 </div>`;
             // cardContainer.innerHTML = "";
@@ -153,8 +154,6 @@ function nearbyCallback(results, status) {
                 animation: google.maps.Animation.DROP
             });
 
-            //alert('placeDetails.formatted_address');
-
             google.maps.event.addListener(marker, "click", function() {
                 infoWindow.setContent(
                     infoPlace.name +
@@ -172,22 +171,3 @@ function nearbyCallback(results, status) {
         }
     }
 }
-
-// const inserPhoto = foto => {
-//     let cardImg = document.getElementById("card-photo");
-//     cardImg.src = `${foto}`;
-//     document.getElementById("card").appendChild(cardImg);
-// };
-
-// function nearbyOutput(namePlace, vicinityPlace, priceL, rattingF, foto) {
-//     // let cardImg = document.getElementById("card-photo")
-//     // cardImg.src = `${foto}`;
-//     // document.getElementById("card").appendChild(cardImg)
-
-//     document
-//         .getElementById("nearbyResults")
-//         .append(
-//             `<div>NOMBRE:  ${namePlace} | DIRECCION  ${vicinityPlace}  price  ${priceL} ratting ${rattingF}</div> `
-//         );
-//     document.createElement("img");
-// }
