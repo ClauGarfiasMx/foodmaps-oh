@@ -33,9 +33,9 @@ const mainScreen = `
             <div class="map-container">
                 <section id="map"></section>
             </div>
-            <p style="margin-top:1rem">Desarrollado por:</p>
-            <p style="margin:1rem auto .5rem auto">Ana Laura Flores: anafrs26@gmail.com | Iris Aguiar: ing.aguiarg@gmail.com</p>
-            <p>Selene Hernández: selene.hdz.f@gmail.com | <a style="color:#ff5e1e" href="https://claudiagarfias.works">Claudia Garfias: me@claudiagarfias.works</a></p>
+            <p style="margin:1rem auto .5rem auto; font-size:1rem">Desarrollado por:</p>
+            <p style="margin:1rem auto .5rem auto; font-size:1rem">Ana Laura Flores: anafrs26@gmail.com | Iris Aguiar: ing.aguiarg@gmail.com</p>
+            <p style="margin:.25rem auto .25rem auto; font-size:1rem">Selene Hernández: selene.hdz.f@gmail.com | <a style="color:#ff5e1e" href="https://claudiagarfias.works">Claudia Garfias: me@claudiagarfias.works</a></p>
             <div id="card">
                 <img id="card-photo" src="" />
                 <div>
