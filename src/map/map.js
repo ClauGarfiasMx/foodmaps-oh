@@ -1,4 +1,10 @@
 let map, marker, service, infoWindow, buscarRest, type;
+const navigateCard = () => {
+    document.getElementById("cardview").scrollIntoView({
+        behavior: "smooth",
+        inline: "start"
+    });
+};
 
 document.getElementById("boton").addEventListener("click", requestData);
 // document.getElementById("boton-filter").addEventListener("click", requestData);
@@ -13,18 +19,61 @@ function requestData() {
     //     initMap();
     // }
     initMap();
+    navigateCard();
 }
 
 let dataList = document.getElementsByName("myTypes")[0];
 dataList.addEventListener("change", function() {
-    type = this.value;
+    let permittedTypes = [
+        "comida mexicana",
+        "mexicana",
+        "comida italiana",
+        "italiana",
+        "comida china",
+        "china",
+        "comida japonesa",
+        "japonesa",
+        "comida libanesa",
+        "libanesa",
+        "comida arabe",
+        "árabe",
+        "comida árabe",
+        "comida corrida",
+        "cocina corrida",
+        "cocina",
+        "corrida",
+        "pizza",
+        "sushi",
+        "tacos",
+        "comida oriental",
+        "oriental",
+        "comida asiática",
+        "asiática",
+        "asiatica",
+        "comida india",
+        "india",
+        "comida hindú",
+        "comida hindu",
+        "hindú",
+        "hindu",
+        "comida"
+    ];
+    type = this.value.toLowerCase();
     document.getElementById("nearbyResults").innerHTML = "";
     dataList.value = "";
+    console.log(type);
+    let validation = permittedTypes.includes(type);
+    console.log(validation);
 
-    if (type === "") {
-        alert("Favor de seleccionar un campo");
-    } else {
+    if (validation) {
+        document.getElementById("error").style.display = "none";
+        document.getElementById("input").className -= "red-border";
         initMap();
+        navigateCard();
+    } else {
+        document.getElementById("input").className += "red-border";
+        document.getElementById("error").style.display = "block";
+        // alert("Favor de seleccionar un campo");
     }
 });
 
@@ -59,6 +108,7 @@ function initMap() {
                 infoWindow.setContent("Tu estas aquí");
                 map.setCenter(latlng); // Centramos el Mapa a la ubicación actual
                 getNearby(pos["lat"], pos["lng"], map, pos["type"]);
+                navigateCard();
             },
 
             function() {
@@ -82,7 +132,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 function getNearby(lat, lng, map, type) {
     var userLocation = new google.maps.LatLng(lat, lng);
     // var type = type.value;
-    console.log(type);
+    // console.log(type);
 
     var request = {
         location: userLocation,
@@ -98,7 +148,7 @@ function getNearby(lat, lng, map, type) {
 
 function nearbyCallback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
-        console.log(results);
+        // console.log(results);
 
         let cardContainer = document.getElementById("card");
 
@@ -106,14 +156,17 @@ function nearbyCallback(results, status) {
             const cardPhoto = results[i].photos ?
                 results[i].photos[0].getUrl({ maxWidth: 200, maxHeight: 200 }) :
                 "";
-            console.log(e.name);
+            // console.log(e.name);
             let cardArr = `
                 <div class="card-div" id=card${i}>
                 <div class="card-img-div">
                     <img  class="card-img" src=${cardPhoto}/>
                     </div>
                     <div class="card-description">
-                        <h3>${e.name}</h3>
+                    
+                        <h3><img class="logo-description" src="https://claudiagarfias.works/laboratoria/sharedimages/foodmapslogo-or.png"/>${
+                          e.name
+                        }</h3>
                         <p>${e.vicinity}</p>
                         <a class="card-link" target="_blank" href="https://www.google.com/maps/search/?api=1&map_action=map&query=${
                           e.name
@@ -128,7 +181,7 @@ function nearbyCallback(results, status) {
         });
 
         let injectArr = cardDiv2.join("");
-        console.log(cardDiv2);
+        // console.log(cardDiv2);
         cardContainer.innerHTML = injectArr;
 
         for (var i = 0; i < results.length; i++) {
