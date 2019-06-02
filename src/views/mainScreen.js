@@ -1,22 +1,18 @@
 const mainScreen = `
 <section class="main-container">
     <div class="main-screen">
-        
         <div class="logo-container flex-column">
             <img src="https://claudiagarfias.works/laboratoria/sharedimages/foodmapslogo.png" />
             <h1>find & eat</h1>
             <p>¿qué se te antoja hoy?</p>
         </div>
-
         <hr>
         <div class="settings">
-        <button type="submit" id="boton">VER RESTAURANTES CERCANOS</button>
+            <button type="submit" id="boton">VER RESTAURANTES CERCANOS</button>
             <p class="orange-p">O ElegIR una categoría:</p>
-            
-
             <div class="select-container" data-content="">
-            <input type="text" list="kindFood"  name="myTypes" id="input"></label> 
-            <datalist id="kindFood" >
+                <input type="text" list="kindFood" name="myTypes" id="input"></label>
+                <datalist id="kindFood">
                     <option value="Comida Mexicana" ></option>
                     <option value="Comida Italiana"></option>
                     <option value="Comida China"></option>
@@ -31,27 +27,15 @@ const mainScreen = `
                     <option value="Comida Asiática"></option>
                     <option value="Comida india"></option>
             </datalist>
-        </div>
-        <hr>
-
-
-            
+            </div>
+            <hr>
             <p id="empty" hidden>comida+restaurant+bar</p>
-           
-
-            
-        <div class="map-container">
-
-
-        <section id="map" />
-        
-    </div>
-    <p style="margin-top:1rem">Desarrollado por:</p>
-    <p style="margin:1rem auto .5rem auto">Ana Laura Flores: anafrs26@gmail.com | Iris Aguiar: ing.aguiarg@gmail.com</p>
-    <p>Selene Hernández: selene.hdz.f@gmail.com | <a style="color:#ff5e1e" href="https://claudiagarfias.works">Claudia Garfias: me@claudiagarfias.works</a></p>
-
-    
-
+            <div class="map-container">
+                <section id="map"></section>
+            </div>
+            <p style="margin-top:1rem">Desarrollado por:</p>
+            <p style="margin:1rem auto .5rem auto">Ana Laura Flores: anafrs26@gmail.com | Iris Aguiar: ing.aguiarg@gmail.com</p>
+            <p>Selene Hernández: selene.hdz.f@gmail.com | <a style="color:#ff5e1e" href="https://claudiagarfias.works">Claudia Garfias: me@claudiagarfias.works</a></p>
             <div id="card">
                 <img id="card-photo" src="" />
                 <div>

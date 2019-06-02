@@ -107,7 +107,6 @@ function nearbyCallback(results, status) {
                 results[i].photos[0].getUrl({ maxWidth: 200, maxHeight: 200 }) :
                 "";
             console.log(e.name);
-
             let cardArr = `
                 <div class="card-div" id=card${i}>
                 <div class="card-img-div">
@@ -116,11 +115,12 @@ function nearbyCallback(results, status) {
                     <div class="card-description">
                         <h3>${e.name}</h3>
                         <p>${e.vicinity}</p>
-                        <a class="card-link" target="_blank" href="https://www.google.com/maps/place/${
+                        <a class="card-link" target="_blank" href="https://www.google.com/maps/search/?api=1&map_action=map&query=${
                           e.name
-                        }/@${
-        e.geometry.location
-      },[12]z/">Ver en  Google Maps</a>
+                        }">Ver en  Google Maps</a>
+                        
+
+                        
                     </div>
                 </div>`;
             // cardContainer.innerHTML = "";
